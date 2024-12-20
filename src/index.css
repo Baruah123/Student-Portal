@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.badge-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.2),
+                0 0 10px rgba(99, 102, 241, 0.2),
+                0 0 15px rgba(99, 102, 241, 0.2);
+  }
+  to {
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4),
+                0 0 20px rgba(99, 102, 241, 0.4),
+                0 0 30px rgba(99, 102, 241, 0.4);
+  }
+}
+
+.quiz-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
